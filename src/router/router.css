@@ -1,0 +1,45 @@
+@import '../assets/styles/variable.css';
+
+.router {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .router-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .transition-group {
+      width: 100%;
+      flex: 1;
+      position: relative;
+
+      .transition-page {
+        width: 100%;
+        flex: 1;
+        position: absolute;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+:global(.fade-enter) {
+  opacity: 1;
+  z-index: 1;
+}
+
+:global(.fade-enter.fade-enter-active) {
+  opacity: 1;
+}
+
+:global(.fade-exit) {
+  opacity: 0;
+}
+
+:global(.fade-exit.fade-exit-active) {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}

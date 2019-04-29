@@ -1,0 +1,135 @@
+@import '../../assets/styles/variable.css';
+
+.home {
+  .banner-wrapper {
+    position: relative;
+
+    .banner {
+      height: 100%;
+      position: relative;
+
+      .banner-img-1 {
+        background-image: url(./images/1.jpg);
+      }
+
+      .banner-img-2 {
+        background-image: url(./images/2.jpg);
+      }
+
+      .banner-img-3 {
+        background-image: url(./images/3.jpg);
+      }
+
+      .banner-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        transition: opacity 1s;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+        .banner-desc {
+          padding-top: 50px;
+          text-align: center;
+
+          h3 {
+            line-height: 70px;
+            color: #fff;
+            font-size: 60px;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-family: Lato, sans-serif;
+          }
+        }
+      }
+
+      .banner-img-active {
+        opacity: 1;
+      }
+    }
+
+    .nav {
+      width: 100%;
+      position: absolute;
+      bottom: 33px;
+      text-align: center;
+      font-size: 0.85em;
+      font-family: Arial;
+      font-weight: bold;
+      color: #666;
+
+      .nav-item {
+        display: inline-block;
+        *zoom: 1;
+        *display: inline;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        background: rgba(255, 255, 255, 0.6);
+        transition: all 0.3s ease;
+        background-clip: padding-box;
+        box-sizing: border-box;
+        text-indent: -9999px;
+        outline: 0;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .nav-item.nav-item-active,
+      .nav-item:hover {
+        background: rgba(0, 0, 0, 0);
+        border-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  .banner-1 {
+    width: $layoutWidth;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 35px;
+  }
+
+  .banner-2 {
+    width: $layoutWidth;
+    margin-left: auto;
+    margin-right: auto;
+
+    .banner-2-content {
+    }
+  }
+
+  .banner-3 {
+    width: $layoutWidth;
+    margin-left: auto;
+    margin-right: auto;
+
+    .banner-3-content {
+    }
+
+    .banner-3-img {
+    }
+  }
+
+  .banner-4 {
+    width: $layoutWidth;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+
+    .banner-4-content {
+    }
+
+    .banner-4-img {
+    }
+  }
+}

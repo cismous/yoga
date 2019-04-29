@@ -1,0 +1,7 @@
+@import './variable.css';
+
+@define-mixin layout {
+  width: $layoutWidth;
+  margin-left: auto;
+  margin-right: auto;
+}

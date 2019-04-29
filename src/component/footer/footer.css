@@ -1,0 +1,129 @@
+@import '../../assets/styles/variable.css';
+
+.footer {
+}
+
+.footer-banner {
+  height: 560px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./img/footer.jpg);
+  background-position: 50% 38px;
+
+  .banner-desc {
+    width: 780px;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .desc-item {
+      letter-spacing: 2px;
+      font-family: 'Lato', sans-serif;
+      text-transform: uppercase;
+      line-height: 70px;
+      font-weight: 300;
+      color: #fff;
+    }
+  }
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 222px;
+  padding: 0 40px;
+  margin: 0px auto;
+  background-color: #fff;
+  justify-content: space-between;
+
+  .social {
+    flex: 1;
+
+    a {
+      float: left;
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+      margin-left: 16px;
+      border: 1px solid $gray;
+      color: $gray;
+      font-size: 18px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 100%;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.facebook {
+        svg {
+          width: 16px;
+        }
+      }
+
+      &.instagram {
+        svg {
+          width: 20px;
+        }
+      }
+
+      svg {
+        transition: fill 0.3s ease;
+        fill: $gray;
+      }
+
+      &:hover {
+        border-color: $theme;
+        background: $theme;
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .content {
+    flex: 100px;
+    text-align: center;
+
+    .menu {
+      padding: 0;
+      margin: 0 0 12px;
+
+      li {
+        display: inline-block;
+        margin: 0 9px;
+
+        a {
+          display: block;
+          line-height: 16px;
+          padding: 0 5px;
+          color: $gray;
+          font-size: 13px;
+          font-weight: 400;
+          text-transform: uppercase;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+      }
+    }
+
+    .copyright {
+      color: $gray;
+      font-size: 12px;
+    }
+  }
+
+  .other {
+    flex: 1;
+  }
+}
