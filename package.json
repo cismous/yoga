@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start:dev": "webpack-dev-server --mode development",
+    "start:dev": "NODE_ENV=development webpack-dev-server",
     "start": "webpack --mode development",
-    "build": " NODE_ENV=production && webpack",
+    "build": " NODE_ENV=production && webpack --mode production",
     "dev-build": "webpack --mode development",
     "prod-build": "yarn run build",
     "fix-code": "prettier-eslint --write 'src/**/*.{ts,tsx}'",

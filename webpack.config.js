@@ -4,7 +4,7 @@ const HtmlPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
-const DIST_PATH = isDev ? __dirname + '/dist' : __dirname + '/dist/test'
+const DIST_PATH = `${__dirname}/dist${isDev ? '' : '/test'}`
 const PUBLIC_PATH = isDev ? '/' : '/test/'
 
 module.exports = {
@@ -19,8 +19,8 @@ module.exports = {
   plugins: [
     new HtmlPlugin({
       template: './public/index.html',
-      filename: '../index.html',
-      BASE_URL: isDev ? '/test' : '/',
+      filename: isDev ? 'index.html' : '../index.html',
+      BASE_URL: PUBLIC_PATH,
     }),
     new CopyPlugin([
       {
@@ -31,7 +31,7 @@ module.exports = {
     ]),
   ],
 
-  devtool: 'source-map',
+  devtool: isDev ? 'source-map' : '',
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -43,12 +43,8 @@ module.exports = {
     disableHostCheck: true,
     host: '0.0.0.0',
     hot: true,
-    open: true,
-    proxy: {
-      '/api/web': {
-        target: 'http://127.0.0.1:5555',
-      },
-    },
+    open: false,
+    proxy: {},
   },
 
   module: {
